@@ -1,0 +1,24 @@
+1. vmware + ubuntu11.10 x64
+
+sudo apt-get install gcc g++ build-essential libopenmpi-dev openmpi-bin default-jdk cmake zlib1g-dev git
+
+sudo apt-get update
+sudo apt-get install g++
+sudo apt-get install zlib1g-dev
+sudo apt-get install build-essential
+sudo apt-get install cmake
+sudo apt-get install git
+sudo apt-get install default-jdk
+sudo apt-get install libboost1.46-all-dev (two options, the other one is libboost1.42-all-dev)
+sudo apt-get install libopenmpi-dev openmpi-bin
+
+git clone https://github.com/graphlab-code/graphlab.git
+
+cd graphlab
+./configure
+
+cd debug/apps
+make -j 2
+
+cd debug/toolkits/graph_analytics
+make -j 2
